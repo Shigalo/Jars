@@ -14,4 +14,10 @@ public class Cucumber {
     public String toString() {
         return "C[" + volume + "]";
     }
+
+    public Cucumber cutAndGetNew(int cutVolume) {
+        int leftovers = volume - cutVolume;
+        this.volume = cutVolume;
+        return new Cucumber(leftovers);
+    }
 }
