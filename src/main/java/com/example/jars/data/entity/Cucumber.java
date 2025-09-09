@@ -1,4 +1,4 @@
-package com.example.jars.entity;
+package com.example.jars.data.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,9 +15,4 @@ public class Cucumber {
         return "C[" + volume + "]";
     }
 
-    public Cucumber cutAndGetNew(int cutVolume) {
-        int leftovers = volume - cutVolume;
-        this.volume = cutVolume;
-        return new Cucumber(leftovers);
-    }
 }

@@ -1,4 +1,4 @@
-package com.example.jars.entity;
+package com.example.jars.data.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,12 +15,8 @@ public class Jar {
     @Getter @Setter
     int maxVolume;
 
-    public Jar() {
-        maxVolume = new Random().nextInt(20,50);
-    }
-
-    public boolean volumeIsEnough(Cucumber cucumber) {
-        return getEmptyVolume() - cucumber.volume >= 0;
+    public Jar(int min, int max) {
+        maxVolume = new Random().nextInt(min, max);
     }
 
     public int getEmptyVolume() {

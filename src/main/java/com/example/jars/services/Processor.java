@@ -2,7 +2,7 @@ package com.example.jars.services;
 
 import reactor.core.publisher.Flux;
 
-public interface ProcessService<T, V> {
+public interface Processor<T, V> {
 
-    Flux<V> process(Flux<T> flux);
+    Flux<V> doProcess(Flux<T> flux);
 }
